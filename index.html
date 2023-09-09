@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <title>Juego De Dados</title>
+</head>
+<body>
+    <h1>Juego de los dados</h1>
+    <div class="cajaDado">
+        <div class="imgDado"></div>
+        <p class="mensaje">Suerte</p> 
+    </div>
+    <form id="numerosForm">
+        <label for="num1">
+            <input type="radio" name="numeros" id="num1" value="1"> 1
+        </label>
+        <label for="num2">
+            <input type="radio" name="numeros" id="num2" value="2"> 2
+        </label>
+        <label for="num3">
+            <input type="radio" name="numeros" id="num3" value="3"> 3
+        </label>
+        <label for="num4">
+            <input type="radio" name="numeros" id="num4" value="4"> 4
+        </label>
+        <label for="num5">
+            <input type="radio" name="numeros" id="num5" value="5"> 5
+        </label>
+        <label for="num6">
+            <input type="radio" name="numeros" id="num6" value="6"> 6
+        </label>
+    </form>
+    <div class="contenedorBotonYContador">
+        <button type="button" class="btnGenerar">
+            Generar Dado
+        </button>
+        <div class="cantidadDeIntentos">
+            <p>Cantidad de intentos:</p>
+            <h3 class="cantintentos">3</h3>
+        </div>
+    </div>    
+    <script src="index.js"></script>
+</body>
+</html>

@@ -35,24 +35,25 @@ h1{
 /* Estilo para el botón */
 .btnGenerar {
     background-color: #363333;
-    color: #ff0000;
+    color: #09ff00;
     font-family: 'Courier New', monospace;
     font-size: 18px;
     text-align: center;
     text-transform: uppercase;
     letter-spacing: 2px;
     padding: 10px;
-    border: 2px solid #ff0000;
+    border: 2px solid #00ff4c;
     border-radius: 10px;
     width: 30%;
-    box-shadow: 0 0 20px rgba(255, 0, 0, 0.5);
+    box-shadow: 0 0 20px rgba(0, 255, 34, 0.5);
     margin: auto;
     overflow: hidden;
     transition: color 0.5s; /* Transición de color */
 }
 
 .btnGenerar:hover {
-    background-color: #160000;
+    background-color: #001601;
+    box-shadow: 0 0 40px rgba(0, 255, 34, 0.5);
 }
 
 /* Estilo para el contador */
@@ -152,13 +153,18 @@ main {
 label {
     display: inline-block;
     margin: 10px;
-    font-size: 18px;
+    font-size: 25px;
     color: aquamarine;
     cursor: pointer;
     flex: 1;
     text-align: center;
 }
 
+input[type=radio]{
+    height: 25px;
+    width: 25px;
+    border-radius: 10%;
+}
 /* Estilos para dispositivos pequeños */
 @media screen and (max-width: 768px) {
     .cajaDado {

@@ -5,8 +5,6 @@ const numerosForm = document.getElementById('numerosForm');
 const cantidadDeIntentos = document.querySelector('.cantintentos');
 let numero = 0;
 
-
-
 // Agregar evento al botón
 btn.addEventListener('click', () => {
     // Obtener el número seleccionado por el usuario
@@ -36,18 +34,19 @@ btn.addEventListener('click', () => {
     // Generar un número aleatorio
     numero = Math.floor(Math.random() * 6) + 1;
 
-    // Función para mostrar la animación de los dados
-    const mostrarDado = (i) => {
+// Función para mostrar la animación de los dados
+const mostrarDado = () => {
+    let i = 1;
+    const interval = setInterval(() => {
         if (i < 7) {
             // Mostrar una imagen del dado con un mensaje de espera
-            setTimeout(() => {
-                CajaDado.innerHTML = `<img src="./img/${i}.png" class="imgDado" alt="dado${i}">`;
-                CajaDado.innerHTML += '<p class="mensaje">Espere...</p>';
-                mostrarDado(i + 1); // Llamar a la función para mostrar el siguiente número
-            }, 350 / 6); // Esperar 0.5 segundos entre cada número
+            CajaDado.innerHTML = `<img src="./img/${numero}.png" class="imgDado" alt="dado${numero}">`;
+            CajaDado.innerHTML += '<p class="mensaje">Espere...</p>';
+            numero = Math.floor(Math.random() * 6) + 1;
+            i++;
         } else {
-            // Número aleatorio generado
-
+            clearInterval(interval); // Detener la animación
+            numero = Math.floor(Math.random() * 6) + 1;
             // Mostrar el resultado después de 3 segundos
             setTimeout(() => {
                 if (numeroSelect === numero) {
@@ -61,7 +60,9 @@ btn.addEventListener('click', () => {
                 }
             }, 300);
         }
-    };
+    }, 200); // Esperar 0.2 segundos entre cada número
+};
+
     // Comenzar la animación de los dados
     mostrarDado(1);
 });

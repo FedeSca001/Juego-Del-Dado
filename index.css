@@ -29,7 +29,7 @@ h1{
 }
 
 .contenedorBotonYContador:hover {
-    background-color: #333; /* Cambia el color de fondo al pasar el mouse */
+    background-color: #333;
 }
 
 /* Estilo para el botón */
@@ -113,33 +113,46 @@ main {
     box-sizing: border-box;
 }
 
-/* Caja del dado */
+/* Estilo para la caja del dado */
 .cajaDado {
-    background-color: aliceblue;
+    background-color: #000;
     margin: auto;
     width: 80%;
-    height: 200px;
+    height: 300px;
     padding: 20px;
     border-radius: 10px;
+    border: 2px solid #ff0000;
     text-align: center;
     margin-bottom: 20px;
+    box-shadow: 0 0 20px rgba(255, 0, 0, 0.5);
+    transition: 0.3s;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.cajaDado:hover {
+    background-color: #333;
+    box-shadow: 0 0 50px rgba(255, 106, 106, 0.5);
+}
+
+/* Mensaje dentro de la caja del dado */
+.mensaje {
+    font-size: 24px;
+    font-weight: 600;
+    color: #ff0000;
 }
 
 /* Imagen del dado */
 .imgDado {
     width: 150px;
     height: 150px;
-    background-color: white;
-    border-radius: 5px;
+    background-color: #f2f2f2;
+    border-radius: 10px;
     transition: transform 0.5s ease-in-out;
 }
 
-/* Mensaje */
-.mensaje {
-    font-size: 20px;
-    font-weight: 500;
-    color: blueviolet;
-}
 
 /* Números */
 #numerosForm {
@@ -161,9 +174,23 @@ label {
 }
 
 input[type=radio]{
-    height: 25px;
+    appearance: none;
+    border-radius: 50%;
     width: 25px;
-    border-radius: 10%;
+    height: 25px;
+    border: 2px solid aquamarine;
+    transition: 0.2s all linear;
+    position: relative;
+    background: rgba(248, 252, 165, 0.258);
+}
+
+input[type=radio]:checked {
+    border: 9px solid rgb(254, 254, 122);
+}
+
+input[type=radio]:hover{
+    background-color: #ffffff64;
+    box-shadow: 0 0 40px rgba(221, 255, 0, 0.5);
 }
 /* Estilos para dispositivos pequeños */
 @media screen and (max-width: 768px) {

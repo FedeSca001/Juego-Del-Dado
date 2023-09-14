@@ -7,9 +7,7 @@ let numero = 0;
 
 // Agregar evento al botón
 btn.addEventListener('click', () => {
-    // Obtener el número seleccionado por el usuario
     const numeroSeleccionado = document.querySelector('input[name="numeros"]:checked');
-
     // Verificar si se ha seleccionado un número
     if (!numeroSeleccionado) {
         CajaDado.innerHTML = '<p class="mensaje">Por favor, selecciona un número antes de generar.</p>';
@@ -17,7 +15,6 @@ btn.addEventListener('click', () => {
     }
 
     // Autorizacion del contador de cantidades
-    console.log(Number(cantidadDeIntentos.textContent));
     if (Number(cantidadDeIntentos.textContent) === 0) {
         // cancelar boton
         CajaDado.innerHTML = '<p class="mensaje">Ya se agotaron los intentos</p>';
